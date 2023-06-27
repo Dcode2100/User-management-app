@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Modal from "./components/modal/modal";
 function App() {
   const [item, setItem] = React.useState([
     { id: "1", name: "abce", description: "random text1" },
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="app">
+      <div className="app-wrapper">
       <table>
         <thead>
           <tr>
@@ -44,6 +46,8 @@ function App() {
         </tbody>
       </table>
         <button className="add-btn">Add</button>
+        <Modal/>
+        </div>
     </div>
   );
 }

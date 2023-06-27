@@ -1,11 +1,11 @@
 .app{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+  position: relative;
 }
 
+.app-wrapper{
+  
+  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+}
 table {
   width: 100%;
   border-collapse: collapse;
