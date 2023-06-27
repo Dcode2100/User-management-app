@@ -10,10 +10,10 @@ function App() {
   ]);
 
   function handleRemove(itemID) {
-    
-    const newlist = item.filter(item => item.id !== itemID)
-    setItem(newlist)
+    const newlist = item.filter((item) => item.id !== itemID);
+    setItem(newlist);
   }
+
   return (
     <div className="app">
       <table>
@@ -42,14 +42,8 @@ function App() {
             </tr>
           ))}
         </tbody>
-        <tfoot>
-          <tr>
-            <td>
-              <button className="add-btn">Add</button>
-            </td>
-          </tr>
-        </tfoot>
       </table>
+        <button className="add-btn">Add</button>
     </div>
   );
 }
