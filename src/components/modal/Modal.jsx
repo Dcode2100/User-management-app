@@ -1,11 +1,14 @@
 import React from "react";
 import "./modal.css";
-const Modal = () => {
+const Modal = ({setShowModal}) => {
+    function handleCloseModal(){
+        setShowModal(false);
+    }
   return (
     <div className="modal">
       <div className="modal wrapper ">
         <h1>Modal</h1>
-
+        
         <div className="modal-input-wrapper">
           <input
             placeholder="ID"

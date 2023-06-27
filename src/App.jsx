@@ -9,12 +9,12 @@ function App() {
     { id: "4", name: "lmn", description: "random text4" },
     { id: "5", name: "ijk", description: "random text5" },
   ]);
-
+  const [showModal, setShowModal] = React.useState(false);
   function handleRemove(itemID) {
     const newlist = item.filter((item) => item.id !== itemID);
     setItem(newlist);
   }
-
+  
   return (
     <div className="app">
       <div className="app-wrapper">
@@ -45,8 +45,9 @@ function App() {
           ))}
         </tbody>
       </table>
-        <button className="add-btn">Add</button>
-        <Modal/>
+        <button className="add-btn" onClick={() => setShowModal(prev => !prev)}>Add</button>
+        {showModal ? <Modal setShowModal={setShowModal}/> : ""}
+        
         </div>
     </div>
   );
