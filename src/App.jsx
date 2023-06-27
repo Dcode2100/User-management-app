@@ -32,15 +32,22 @@ function App() {
               <td>{item.name}</td>
               <td>{item.description}</td>
               <td>
-                <button onClick={() => handleRemove(item.id)} className="td-btn">Remove</button>
+                <button
+                  onClick={() => handleRemove(item.id)}
+                  className="td-btn"
+                >
+                  Remove
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
         <tfoot>
-          <td>
-            <button className="add-btn">Add</button>
-          </td>
+          <tr>
+            <td>
+              <button className="add-btn">Add</button>
+            </td>
+          </tr>
         </tfoot>
       </table>
     </div>
